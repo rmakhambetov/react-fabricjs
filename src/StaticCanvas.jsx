@@ -1,6 +1,8 @@
 'use strict';
 
-import React, { PropTypes } from 'react';
+import PropTypes from 'prop-types';
+
+import React from 'react';
 import {fabric} from 'fabric';
 import diff from 'deep-diff';
 import collection from './mixin/collection.js';
