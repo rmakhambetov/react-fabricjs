@@ -1,8 +1,7 @@
 'use strict';
 
-import PropTypes from 'prop-types';
-
 import React from 'react';
+import PropTypes from 'prop-types';
 import {fabric} from 'fabric';
 import diff from 'deep-diff';
 import collection from './mixin/collection.js';
@@ -200,11 +199,9 @@ export default class StaticCanvas extends React.Component {
 
 			Object.keys(this.prevRef).forEach(key => {
 				const object = this.prevRef[key].getObject();
-				if (object) {
-                    // in case this object hasn't actually been added yet, set a flag so that we don't add it later
-                    object.doNotAdd = true;
-                    this.remove(object);
-				}
+				// in case this object hasn't actually been added yet, set a flag so that we don't add it later
+				object.doNotAdd = true;
+				this.remove(object);
 			});
 		}
 
