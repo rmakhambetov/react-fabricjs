@@ -199,9 +199,11 @@ export default class StaticCanvas extends React.Component {
 
 			Object.keys(this.prevRef).forEach(key => {
 				const object = this.prevRef[key].getObject();
-				// in case this object hasn't actually been added yet, set a flag so that we don't add it later
-				object.doNotAdd = true;
-				this.remove(object);
+				if (object) {
+                    // in case this object hasn't actually been added yet, set a flag so that we don't add it later
+                    object.doNotAdd = true;
+                    this.remove(object);
+				}
 			});
 		}
 
