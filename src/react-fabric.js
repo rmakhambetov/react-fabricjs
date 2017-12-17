@@ -17,7 +17,6 @@ import _Image from './Image.jsx';
 import _Text from './Text.jsx';
 import _Itext from './IText.jsx';
 
-import _imageFilter from './ImageFilters.js';
 import _color from './Color.js';
 
 // Main Bundle
@@ -39,7 +38,6 @@ export default {
 	Text: _Text,
 	Itext: _Itext,
 
-	imageFilter: _imageFilter,
 	color: _color,
 };
 
@@ -63,5 +61,4 @@ export let Text = _Text;
 export let Itext = _Itext;
 
 // utils
-export let imageFilter = _imageFilter;
-export let color = _color; 
+export let color = _color;
